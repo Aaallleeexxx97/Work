@@ -4,6 +4,12 @@ public class Program
 {
     public static void Main()
   {
+     string[] mass = Process(input());
+    
+    for(int i = 0;i<mass.Length;i++)
+    {  
+      Console.WriteLine(mass[i]);
+    }
   } 
      public static string[] input()
   {
