@@ -18,6 +18,36 @@ public class Program
     }
     return mass;
   }
+  public static string[] Process(string[] mas)
+  {
+    string[] mass = mas;
+    int j = 0;
+    for(int i = 0;i<mass.Length;i++)
+    {
+      if(mass[i].Length <= 3)
+      {
+        j++;
+      }
+    }
+    string[] nums = new string[j];
+    //---------------------------------//
+    int p = 0;
+    for(int k = 0;k<j;k++)  
+    {
+      for(int i = p;i<mass.Length;i++)
+      {
+        p++;
+        if(mass[i].Length <= 3)
+        {
+          nums[k] = mass[i];
+          break;          
+        }
+      }
+    }
+    //---------------------------------//
+    return nums;
+  }
 }
+
 
 
